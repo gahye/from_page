@@ -1,0 +1,22 @@
+
+#clothes_img {
+	text-align:left;
+	
+}
+
+#simple-menu {
+	position: relative;
+	left: 10px;
+	font-size: 30px;
+	color: #7C0CC5;
+  	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+#sidr_user_li {
+	color: #7C0CC5;
+	font-size: 15px;
+  	
+}
+

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+	<!-- 부트스트랩 -->
+    <link href="bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/bootstrap.js" rel="javascript">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/sidr/stylesheets/jquery.sidr.light.css">
+
+    
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/jquery.imagefit.js"></script>
+    <script type="text/javascript" src="js/sidr/jquery.sidr.min.js"></script>
+
+    
+    <script type="text/javascript"> 
+      $(window).load(function() {$('#clothes_img').imagefit();});
+    
+      $(document).ready(function() {
+        $("img.rollover").hover( 
+          function() { this.src = this.src.replace("_off", "_on"); 
+          }, 
+          function() { this.src = this.src.replace("_on", "_off"); 
+          });
+      }); 
+    </script>
+   
+    <script>
+      $(document).ready(function() {
+        $('#simple-menu').sidr();
+      });
+    </script>
+
+    <script>
+   // 반드시 본문 내용 중에 id : Index, Footer가 있어야 함.
+   var Height_Index = Number(document.getElementById("container").clientHeight); // Min-Height를 지정해 주기 위해 기존 Default Height를 저장
+   window.onload  = changeContentSize;          // Window 창 로드시
+   window.onresize  = changeContentSize;          // Window 창 크기를 조정할때마다
+   function changeContentSize() {
+    var Height_Window   = Number(document.documentElement.clientHeight);   // Window 창 높이
+    var Height_Footer   = Number(document.getElementById("footer").clientHeight); // Footer 높이 구하기
+    var ContentTop = Height_Window - Height_Footer - 5;          // 5 = Margin + Padding + Border of Top, Bottom
+    document.getElementById("container").style.minHeight = Height_Index + 'px';     // Index에 Min-Height 적용
+    document.getElementById("container").style.height = ContentTop + "px";      // Index 높이 변경
+   }
+  </script>
+
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+  		<div class="navbar-header">
+    		<a class="navbar-brand" href="#">
+    			<ul class="nav navbar-nav">
+    				<li class="menu-item"><img alt="NAVER" src="assets/naverlogo.png"> </li>
+    				<li class="menu-item" style="padding-left:8px"><img alt="FROM" src="assets/fromlogo.png"></li>
+
+    			</ul>
+    		</a>
+  		</div>
+
+  		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    	<ul class="nav navbar-nav navbar-right">
+	    		
+    		
+      		<li class="dropdown">
+      			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img alt="huiyomi" src="assets/huiyomi.png"><span class="caret"></span></a>
+
+      			<ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		         </ul>
+
+
+      		</li>
+      		<li class="menu-item"><a href="#"><img alt="CART" src="assets/cart.png"></li></a></li>
+      		<li class="menu-item"><a href="#"><img alt="QNA" src="assets/qna.png"></li></a></li>
+    	</ul>
+  	</div>
+  </div>
+	</nav>
+
+<a id="simple-menu" href="#sidr">☰</a>
+
+<div id="sidr">
+  <!-- Your content -->
+  <ul>
+    <li><a href="#">FROM 홈</a></li>
+    <hr>
+    <li><a class="deactive" href="#">나의 옷장</a></li>
+      <ul>
+        <li><a href="#">상의</a></li>
+        <li><a href="#">하의</a></li>
+        <li><a href="#">원피스</a></li>
+        <li><a href="#">외투</a></li>
+      </ul>
+    <hr>
+
+    <li><a href="#">마이핏</a></li>
+      <ul>
+        <li><a href="#">상의</a></li>
+        <li><a href="#">하의</a></li>
+        <li><a href="#">원피스</a></li>
+        <li><a href="#">외투</a></li>
+      </ul>
+     <hr>
+
+
+    <li><a href="#">프로필</a></li>
+    <li><a href="#">테마설정</a></li>
+  </ul>
+</div>
+
+	<div class="container" id="container">	
+    
+    <br/>
+    <div id="clothes_img">
+     <!-- <div style="position:absolute; left: 269.857142857144px; top: 131.285714285714px;">
+        <img src="assets/onepiece_off.png" width="392" height="379" startwidth="392" startheight="379" style="max-width:392px width:100%; height:379px" class="rollover" />
+      </div> -->
+
+      <div style="position:relative; left: -12.85%; top: 0%;">
+        <img src="assets/onepiece_off.png" width="392" height="379" startwidth="392" startheight="379" style="max-width:392px width:100%; height:379px overflow:visible;" class="rollover" />
+      </div>
+
+      <!--<div style="position:absolute; left: 502.415134370887px; top: 53.7142857142858px;">
+       <a href="closet/top/top.html"><img src="assets/top_off.png" width="591px" height"730px" startwidth="591" startheight="730" style="max-width:591px width:730%; height:379px overflow:visible;" class="rollover"/></a>
+      </div>-->
+
+      <div style="position:relative; left: 16.22%; bottom: 0%;">
+       <a href="closet/top/top.html"><img src="assets/top_off.png" width="591px" height"730px" startwidth="591" startheight="730" style="max-width:591px width:730%; height:379px overflow:visible; margin-top:-40%" class="rollover"/></a>
+      </div>
+
+     
+      <!--<div style="position:absolute;  left: 893.90240452231px; top: 470.25318246315px;">
+       <a href="closet/outer/outer.html"><img src="assets/outer_off.png" width="396px" height"384px" class="rollover"/></a>
+      </div> -->
+
+       <div style="position:relative; left: 42%; bottom: 0%;">
+       <a href="closet/outer/outer.html"><img src="assets/outer_off.png" width="396px" height"384px" style="overflow:visible; margin-top:-27.53%" class="rollover"/></a>
+      </div>
+     
+     
+      <!--<div style="position:absolute; left: 331.485619988061px; top: 559.648514853721px;">
+       <a href="closet/bottom/bottom.html"><img src="assets/bottom_off.png" width="315px" height"300px" class="rollover"/></a>
+      </div> -->
+      
+      <div style="position:relative; left: -10.9%; bottom: 0%;">
+       <a href="closet/bottom/bottom.html"><img src="assets/bottom_off.png" width="315px" height"300px" style="overflow:visible; margin-top:-27.53%" class="rollover"/></a>
+      </div>
+     
+      <!--<div style="position:absolute; left: 923.27586206896px;  top: 181.655172413793px;">
+       <a href="profile.html"><img src="assets/profile.png" width="225px" height"215px" /></a>
+      </div> -->
+
+      <div style="position:relative; left: 37.2%; bottom: 0%;">
+       <a href="profile.html"><img src="assets/profile.png" width="225px" height"215px"  style="overflow:visible; margin-top:-104.6%" /></a>
+      </div>
+
+      <!--<div style="position:absolute; left: 112.729372936612px; top: 375.489391799587px;">
+       <img src="assets/myfit.png" width="266px" height"323px" />
+      </div> -->
+
+      <div style="position:relative; left: -32.2%; bottom: 0%;">
+       <img src="assets/myfit.png" width="266px" height"323px" style="overflow:visible; margin-top:-64.5%"  />
+      </div>
+
+
+      <div style="position:relative; right: -68%; margin-top:-65%">  
+        <a style="text-align:right;">테마설정</a></br>
+        <img src="assets/databar.png">
+    </div>
+    		
+    </div>
+<!--
+	<div id="footer">
+		<hr>
+		<ul class="nav nav-pills">
+		  <li role="presentation"><a href="#">서비스소개</a></li>
+		  <li role="presentation"><a href="#">도움말</a></li>
+		  <li role="presentation"><a href="#">제휴문의</a></li>
+		  <li role="presentation"><a href="#">이용약관</a></li>
+		  <li role="presentation"><a href="#">개인정보취급방침</a></li>
+
+		</ul>
+	</div>
+</div>
+-->
+</body>
+
+
+</html>

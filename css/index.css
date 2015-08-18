@@ -1,0 +1,85 @@
+@charset "utf-8"
+@font-face {
+font-family: 'Nanum Barun Gothic';
+font-style: normal;
+font-weight: 400;
+src: local('Nanum Barun Gothic Regular'), local('Nanum Barun Gothic-Regular'), local('NanumBarunGothic Regular');
+src: url("/Font/NanumBarunGothic.eot"); 
+src: url("/Font/NanumBarunGothic.eot?#iefix") format('embedded-opentype'),
+url("/Font/NanumBarunGothic.woff") format('woff'), 
+url("/Font/NanumBarunGothic.ttf") format('truetype'), 
+url("/Font/NanumBarunGothic.svg") format('svg'); 
+}
+@font-face {
+font-family: 'Nanum Barun Gothic's ;
+font-style: normal;
+font-weight: 700;
+src: local('Nanum Barun Gothic Bold'), local('Nanum Barun Gothic-Bold'), local('NanumBarunGothic Bold');
+src: url("/Font/NanumBarunGothicBold.eot");
+src: url("/Font/NanumBarunGothicBold.eot?#iefix") format('embedded-opentype'),
+url("/Font/NanumBarunGothicBold.woff") format('woff'),
+url("/Font/NanumBarunGothicBold.ttf") format('truetype'),
+url("/Font/NanumBarunGothicBold.svg") format('svg');
+}
+
+
+
+html, body {
+
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+	font-family: 'Nanum Barun Gothic',sans-serif !important;
+
+	padding-top: 70px;
+	padding-bottom: 1.9em;
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	background: -webkit-linear-gradient(top, rgba(28, 245, 191, 1), rgba(170, 176, 232, 1), rgba(255, 216, 246, 1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(28, 245, 191, 1), rgba(170, 176, 232, 1), rgba(255, 216, 246, 1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(28, 245, 191, 1), rgba(170, 176, 232, 1), rgba(255, 216, 246, 1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(28, 245, 191, 1), rgba(170, 176, 232, 1), rgba(255, 216, 246, 1));/* syntax (must be last) */
+
+}
+
+div {
+	text-align:center;
+}
+
+
+.navbar{
+	background-color: #323232;
+	border: none;
+}
+
+#footer{
+	text-align: center;
+
+}
+
+.info {
+	font-size:15px;
+	color: #7C0CC5;
+}
+
+.info input{
+	color: #ffffff;
+	border-color: #0afadb;
+	background-color: #a390e1;
+	border-radius: 0px;
+}
+
+.info .control-label{
+	color: #ffffff;
+}
+
+.btn {
+	color: #0afadb;
+	border-color: #0afadb;
+	background-color: #a390e1;	
+	border-radius: 0px;
+}
