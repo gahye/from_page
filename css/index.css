@@ -1,4 +1,4 @@
-@charset "utf-8"
+/*@charset "utf-8"
 @font-face {
 font-family: 'Nanum Barun Gothic';
 font-style: normal;
@@ -21,11 +21,10 @@ url("/Font/NanumBarunGothicBold.woff") format('woff'),
 url("/Font/NanumBarunGothicBold.ttf") format('truetype'),
 url("/Font/NanumBarunGothicBold.svg") format('svg');
 }
-
+*/
 
 
 html, body {
-
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -34,7 +33,6 @@ html, body {
 
 body {
 	font-family: 'Nanum Barun Gothic',sans-serif !important;
-
 	padding-top: 70px;
 	padding-bottom: 1.9em;
 	background-repeat: no-repeat;

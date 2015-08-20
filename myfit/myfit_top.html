@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>MY FIT</title>
+    <!-- 부트스트랩 -->
+    <link href="../bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../bootstrap/bootstrap.js" rel="javascript">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+
+
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/jquery.imagefit.js"></script>
+
+
+    <script type="text/javascript">
+        //        $(window).load(function() {$('.clothes_img').imagefit();});
+
+        $(document).ready(function() {
+            $("img.rollover").hover(
+                    function() { this.src = this.src.replace("_off", "_mouse");
+                    },
+                    function() { this.src = this.src.replace("_mouse", "_off");
+                    });
+        });
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <ul class="nav navbar-nav">
+                    <li class="menu-item"><img alt="NAVER" src="../assets/naverlogo.png"> </li>
+                    <li class="menu-item" style="padding-left:8px"><img alt="FROM" src="../assets/fromlogo.png"></li>
+
+                </ul>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img alt="huiyomi" src="../assets/huiyomi.png"><span class="caret"></span></a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+
+
+                </li>
+                <li class="menu-item"><a href="#"><img alt="CART" src="../assets/cart.png"></li></a></li>
+                <li class="menu-item"><a href="#"><img alt="QNA" src="../assets/qna.png"></li></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <br/>
+            <img src="../img/myfit/myfit_title.png" class="myfit">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" style="position:relative; margin-top:2%;">
+
+            <a href="myfit_top.html"><img src="../img/myfit/myfit_top_mouse.png"></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+            <a href="myfit_bottom.html"><img src="../img/myfit/myfit_bottom_off.png" class="rollover"></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+            <a href="myfit_onepiece.html"><img src="../img/myfit/myfit_onepiece_off.png" class="rollover"></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+            <a href="myfit_outer.html"><img src="../img/myfit/myfit_outer_off.png" class="rollover"></a>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div style="position:relative; left:-8%; margin-top:3%">
+            <img src="../img/myfit/myfit_ruler.png" >
+        </div>
+    </div>
+    <div style="position:relative; left: -4%; margin-top:-62%;">
+    <!--<div style="position:absolute; left:245.3333px; top: 250px;">-->
+        <img src="../img/myfit/myfit_bottom_clothes.png" style="overflow:visible;">
+    </div>
+    <div style="position:relative; left: 53%; margin-top:-65%;">
+    <!--<div style="position:absolute; left:1045.3333px; top: 250px;">-->
+        <img src="../img/myfit/myfit_top_list.png" style="overflow:visible;">
+    </div>
+    <div style="position:relative; left: 54%; margin-top:18.5%;">
+        <img src="../img/myfit/myfit_fit.png" style="overflow:visible;">
+    </div>
+
+
+
+</div>
+</body>
+</html>
