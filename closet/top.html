@@ -25,7 +25,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="../main.html">
                 <ul class="nav navbar-nav">
                     <li class="menu-item"><img alt="NAVER" src="../assets/naverlogo.png"> </li>
                     <li class="menu-item" style="padding-left:8px"><img alt="FROM" src="../assets/fromlogo.png"></li>
@@ -51,7 +51,7 @@
 
 
                 </li>
-                <li class="menu-item"><a href="#"><img alt="CART" src="../assets/cart.png"></a></li></a></li>
+                <li class="menu-item"><a href="./recommend/rec_main.html"><img alt="CART" src="../assets/cart.png"></a></li></a></li>
                 <li class="menu-item"><a href="#"><img alt="QNA" src="../assets/qna.png"></a></li></a></li>
             </ul>
         </div>
@@ -62,38 +62,43 @@
 
     <div class="row">
         <div class="col-md-7">
-            <div style="position:relative; left:-25%; margin-top:-2%; z-index:-1;">
-            <img src="../img/closet/top/top_back.png" style="overflow:visible; z-index: -1;">
-            </div>
-            <div style="position:relative; left: 72%; margin-top:-118%;">
-                <img src="../img/closet/top/top_delete.png">
-            </div>
 
+            <div style="position:relative; left:-25%; margin-top:-2%; z-index:-2000;">
+                <img src="../img/closet/top/top_back.png ">
+            </div>
+            <div style="position:relative; left: 72%; margin-top:-115%; z-index:1">
+            <!--<div style="position:absolute; top:40px; left:100px; z-index:1">-->
+                <img src="../img/closet/top/top_delete.png" usemap="#image_map"></a>
+                <map name="image_map">
+                    <area shape="rect" coords="0, 0, 36, 36" href="./top_delete.html">
 
-            <div class="gallery">
-                <img src="../img/closet/top/top_1.png">
-                <img src="../img/closet/top/top_2.png">
-                <img src="../img/closet/top/top_3.png">
-                <img src="../img/closet/top/top_4.png">
-                <img src="../img/closet/top/top_5.png">
-                <img src="../img/closet/top/top_6.png">
-                <img src="../img/closet/top/top_7.png">
+                </map>
 
             </div>
 
 
+            <div class="gallery" style="position:absolute;">
+                <img src="../img/closet/top/top_1.png" class="clothes">
+                <img src="../img/closet/top/top_2.png" class="clothes">
+                <img src="../img/closet/top/top_3.png" class="clothes">
+                <img src="../img/closet/top/top_4.png" class="clothes">
+                <img src="../img/closet/top/top_5.png" class="clothes">
+                <img src="../img/closet/top/top_6.png" class="clothes">
+                <img src="../img/closet/top/top_7.png" class="clothes">
+
+            </div>
 
 
         </div>
         <div class="col-md-5">
-            <div style="position:relative; left:50%; margin-top:35%;">
-            <img src="../img/closet/top/top_pop.png" style="overflow:visible;">
+            <div style="position:relative; left:64%; margin-top:28%;">
+                <img src="../img/closet/top/top_pop_1.png" class="pop" style="overflow:visible;">
             </div>
 
         </div>
    </div>
     <div class="row">
-        <div class="col-md-6" style="left:5%; margin-top:-13%;">
+        <div class="col-md-6" style="left:6%; margin-top:-13%;">
 
             <input type="range" name="slider" id="slider" />
             <div id="caption"></div>
@@ -101,18 +106,6 @@
         </div>
 
     </div>
-
-    <div class="gallery">
-        <img src="../img/closet/top/top_1.png">
-        <img src="../img/closet/top/top_2.png">
-        <img src="../img/closet/top/top_3.png">
-        <img src="../img/closet/top/top_4.png">
-        <img src="../img/closet/top/top_5.png">
-        <img src="../img/closet/top/top_6.png">
-        <img src="../img/closet/top/top_7.png">
-
-    </div>
-
 
 
 </div>

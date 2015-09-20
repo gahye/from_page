@@ -56,7 +56,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="../main.html">
                 <ul class="nav navbar-nav">
                     <li class="menu-item"><img alt="NAVER" src="assets/naverlogo.png"> </li>
                     <li class="menu-item" style="padding-left:8px"><img alt="FROM" src="assets/fromlogo.png"></li>
@@ -82,8 +82,8 @@
 
 
                 </li>
-                <li class="menu-item"><a href="#"><img alt="CART" src="assets/cart.png"></li></a></li>
-                <li class="menu-item"><a href="#"><img alt="QNA" src="assets/qna.png"></li></a></li>
+                <li class="menu-item"><a href="./recommend/rec_main.html"><img alt="CART" src="assets/cart.png"></a></li>
+                <li class="menu-item"><a href="#"><img alt="QNA" src="assets/qna.png"></a></li>
             </ul>
         </div>
     </div>
@@ -93,19 +93,19 @@
 
 <div id="sidr">
     <ul class="sidr1">
-        <li class="sidr2"><a href="#">FROM 홈</a></li>
+        <li class="sidr2"><a href="./index.html">FROM 홈</a></li>
         <hr>
         <li class="sidr2"><a href="#">나의 옷장</a></li>
         <ul class="sidr3">
-            <li class="sidr4"><a href="#">상의</a></li>
-            <li class="sidr4"><a href="#">하의</a></li>
-            <li class="sidr4"><a href="#">원피스</a></li>
-            <li class="sidr4"><a href="#">외투</a></li>
+            <li class="sidr4"><a href="./closet/top.html">상의</a></li>
+            <li class="sidr4"><a href="./closet/bottom.html">하의</a></li>
+            <li class="sidr4"><a href="./closet/onepiece.html">원피스</a></li>
+            <li class="sidr4"><a href="./closet/outer.html">외투</a></li>
         </ul>
         <hr>
 
         <li class="sidr2"><a href="./myfit/myfit_top.html">마이핏</a></li>
-        <li class="sidr2"><a href="#">프로필</a></li>
+        <li class="sidr2"><a href="./profile/top.html">프로필</a></li>
         <li class="sidr2"><a href="#">테마설정</a></li>
     </ul>
     <ul style="position: absolute; bottom:0%;">
@@ -141,20 +141,25 @@
 
 
         <div style="position:relative; left: 40.2%; bottom: 0%;">
-            <a href="profile.html"><img src="img/main/main_profile.png" width="225px" height="215px"
+            <a href="./profile/top.html">
+                <img src="img/main/main_profile.png" width="225px" height="215px"
                                         style="overflow:visible; margin-top:-104.6%" /></a>
         </div>
 
         <div style="position:relative; left: -32.2%; bottom: 0%;">
             <a href="./myfit/myfit_top.html">
-            <img src="img/main/main_myfit.png" width="266px" height="323px" style="overflow:visible; margin-top:-77.5%"  />
+                <img src="img/main/main_myfit.png" width="266px" height="323px"
+                                        style="overflow:visible; margin-top:-77.5%"  /></a>
             </a>
         </div>
 
-
-        <div style="position:relative; margin-top:-77%; right:-70%">
+        <div style="position:relative; margin-top:-77%; right:-70%; z-index:-1;">
             <img src="img/main/main_setting.png" width="266px" height="323px">
         </div>
+
+
+
+
 
     </div>
     </div>

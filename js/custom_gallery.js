@@ -54,9 +54,12 @@ function init() {
 
     $('.gallery img').each( function() {
         $(this).css( 'display', 'inline' );
+        $(this).css( 'zIndex', 5 );
+
         var div = $('<div />').data('slideNum',++pos);
         $(this).wrap( div );
         $(this).parent().data('oldLeftPos',0);
+        console.log($(this).parent())
     } );
 
     // Add a click handler to each div to jump to the div's image when clicked
@@ -88,8 +91,8 @@ function init() {
     // Set up the slider
 
     $('#slider').attr( {
-        'min': -3,
-        'max': totalSlides,
+        'min': -2,
+        'max': totalSlides-3,
         'value': currentSlide
     } );
 
@@ -98,6 +101,7 @@ function init() {
         currentSlide = $(this).val();
         displayGallery();
     } );
+
 
     // All set! Show the gallery
     displayGallery();
@@ -110,9 +114,12 @@ function displayGallery() {
 
     var pos = -3;                              // To track the index of the slide we're working with
     var galleryWidth = $('.gallery').width(); // Width of the gallery/viewport in px
-    var galleryCentre = galleryWidth / 2;     // Horizontal centre point of the gallery in px
-    var windowHeight = $(window).height();    // Viewport height in px
-    var slideHeight = windowHeight - 150;     // Maximum slide height based on window height
+    var galleryCentre = galleryWidth / 2 ;     // Horizontal centre point of the gallery in px
+    //var windowHeight = $(window).height();    // Viewport height in px
+
+    var windowHeight=956;
+    //var slideHeight = windowHeight - 150;     // Maximum slide height based on window height
+    var slideHeight = 840;
 
     // Compute the actual step and slide padding values, based on window height
     var step = windowHeight * stepPercent / 100;
@@ -124,6 +131,8 @@ function displayGallery() {
     // Move through each slide div, positioning it in 3D space
 
     $('.gallery div').each( function() {
+
+        $(this).css( 'zIndex', 5 );
 
         var div = $(this);
 
@@ -144,7 +153,7 @@ function displayGallery() {
             if ( pos > oldCurrentSlide ) {
                 div.css( {
                     '-webkit-transition': 'none',
-                    '-webkit-transform': 'translate3d(' +  div.data('oldLeftPos') + 'px,0,-' + (100+parseInt(div.width()/1.5)) + 'px) rotateY(' + bgRotateAngle + 'deg)'
+                    '-webkit-transform': 'translate3d(' +  div.data('oldLeftPos') + 'px,-45px,-' + (100+parseInt(div.width()/1.5)) + 'px) rotateY(' + bgRotateAngle + 'deg)'
                 } );
             }
 
@@ -154,7 +163,7 @@ function displayGallery() {
             var t = setTimeout( function() {
                 div.css( {
                     '-webkit-transition': '-webkit-transform .8s cubic-bezier(0, 0, .001, 1)',
-                    '-webkit-transform': 'translate3d(' + leftPos + 'px,0,-' + (40+parseInt(div.width()/50)) + 'px) rotateY(' + bgRotateAngle + 'deg)'
+                    '-webkit-transform': 'translate3d(' + leftPos + 'px, -45px,-' + (40+parseInt(div.width()/50)) + 'px) rotateY(' + (bgRotateAngle) + 'deg)'
 //                    '-webkit-transform': 'translate3d(' + leftPos + 'px,0,-' + '0px) rotateY(' + bgRotateAngle + 'deg)'
                 } );
             }, 10 );
@@ -178,7 +187,7 @@ function displayGallery() {
             if ( pos < oldCurrentSlide ) {
                 div.css( {
                     '-webkit-transition': 'none',
-                    '-webkit-transform': 'translate3d(' + div.data('oldLeftPos') + 'px,0,-' + (100+parseInt(div.width()/1.5)) + 'px) rotateY(-' + bgRotateAngle + 'deg)'
+                    '-webkit-transform': 'translate3d(' + div.data('oldLeftPos') + 'px,-38px,-' + (100+parseInt(div.width()/1.5)) + 'px) rotateY(-' + bgRotateAngle + 'deg)'
                 } );
             }
 
@@ -188,7 +197,7 @@ function displayGallery() {
             var t = setTimeout( function() {
                 div.css( {
                     '-webkit-transition': '-webkit-transform .8s cubic-bezier(0, 0, .001, 1)',
-                    '-webkit-transform': 'translate3d(' + leftPos + 'px,0,-' + (30+parseInt(div.width()/50)) + 'px) rotateY(-' + bgRotateAngle + 'deg)'
+                    '-webkit-transform': 'translate3d(' + leftPos + 'px,-38px,-' + (30+parseInt(div.width()/50)) + 'px) rotateY(-' + bgRotateAngle + 'deg)'
 //                    '-webkit-transform': 'translate3d(' + leftPos + 'px,0,-' + '0px) rotateY(-' + bgRotateAngle + 'deg)'
                 } );
             }, 10 );
@@ -207,26 +216,40 @@ function displayGallery() {
             var leftPos = galleryCentre - ( div.width()/2 );
 
             div.css( {
-                '-webkit-transform': 'translate3d(' + leftPos + 'px,0,0) rotateY(0deg)',
+                '-webkit-transform': 'translate3d(' + leftPos + 'px,0,0) rotateY(0deg)'
+
             } );
+
 
             // Store the new position in oldLeftPos
             div.data('oldLeftPos', leftPos);
         }
 
+
+
     } );
+
+    var pop_src = "../img/closet/top/top_pop_";
+    var idx = (currentSlide*1 + 3);
+    if (idx <= totalSlides && idx >= 1){
+        var new_src = pop_src.concat(idx.toString(), '.png');
+        $('img.pop').attr('src', new_src);
+    }
 
     // Update the slider value and caption
     $('#slider').val( currentSlide );
     var currentSlideImage = $('.gallery img').eq( currentSlide - 1 );
     $('#caption').text( currentSlideImage.attr('alt') );
+
+
+
 }
 
 
 // Move one slide to the left by sliding the gallery left-to-right
 
 function moveLeft() {
-    if ( currentSlide > -3 ) {
+    if ( currentSlide > -2 ) {
         oldCurrentSlide = currentSlide;
         currentSlide--;
         displayGallery();
@@ -241,7 +264,7 @@ function moveLeft() {
 // Move one slide to the right by sliding the gallery right-to-left
 
 function moveRight() {
-    if ( currentSlide < totalSlides ) {
+    if ( currentSlide < totalSlides-3 ) {
         oldCurrentSlide = currentSlide;
         currentSlide++;
         displayGallery();

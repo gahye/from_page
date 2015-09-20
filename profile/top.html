@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>PROFILE</title>
+    <!-- 부트스트랩 -->
+    <link href="../bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../bootstrap/bootstrap.js" rel="javascript">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/jquery.imagefit.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("area").click (
+                    function() {
+                        var clicked = $(this).attr('class');
+                        var clicked_idx = clicked.charAt(clicked.length-1);
+
+                        var src = $('img.file').attr("src");
+                        var idx = src.charAt(src.length - 5) * 1;
+                        var newsrc;
+                        if (clicked_idx == 1) {     //face
+                            newsrc="../img/profile/file_face.png";
+                        }
+
+                        else if (clicked_idx == 2) {
+                            newsrc="../img/profile/file_shape.png";
+                        }
+
+                        else if (clicked_idx == 3) {
+                            newsrc="../img/profile/file_leg.png";
+
+                        }
+
+                        else{
+                            newsrc="../img/profile/file_complex.png";
+                        }
+                        $('img.file').attr('src', newsrc);
+
+
+
+
+
+                    }
+            )
+
+        });
+    </script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../main.html">
+                <ul class="nav navbar-nav">
+                    <li class="menu-item"><img alt="NAVER" src="../assets/naverlogo.png"> </li>
+                    <li class="menu-item" style="padding-left:8px"><img alt="FROM" src="../assets/fromlogo.png"></li>
+
+                </ul>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img alt="huiyomi" src="../assets/huiyomi.png"><span class="caret"></span></a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+
+
+                </li>
+                <li class="menu-item"><a href="./recommend/rec_main.html"><img alt="CART" src="../assets/cart.png"></a></li>
+                <li class="menu-item"><a href="#"><img alt="QNA" src="../assets/qna.png"></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div style="position:relative; margin-top: -2%;">
+            <img src="../img/profile/file_center.png" style="overflow:visible;">
+        </div>
+        <div style="position:relative; left: -49%; margin-top:-52%;">
+            <img src="../img/profile/file_left.png" style="overflow:visible;"></div>
+        </div>
+        <div style="position:relative; left: 46%; margin-top:-32%;">
+
+            <img src="../img/profile/file_face.png" class="file" style="overflow:visible;" usemap="image_map"></div>
+                <map name="image_map">
+                    <area shape="circle" class="map_pop1" coords="64, 97, 40" href="#">
+                    <area shape="circle" class="map_pop2" coords="155, 97, 40" href="#">
+
+                    <area shape="circle" class="map_pop3" coords="244, 97, 40" href="#">
+                    <area shape="circle" class="map_pop4" coords="333, 97, 40" href="#">
+
+
+                </map>
+
+        </div>
+
+
+</div>
+
+
+
+</div>
+</body>
+</html>
