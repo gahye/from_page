@@ -10,11 +10,15 @@
     <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="../js/sidr/jquery.sidr.min.js"></script>
     <link rel="stylesheet" href="../js/sidr/jquery.rec.sidr.css">
+    <script type="text/javascript" src="../js/jquery.imagefit.js"></script>
+
     <script src="../bootstrap/bootstrap.min.js"></script>
 
     <script type="text/javascript">
 
         $(document).ready(function() {
+            $(window).load(function() {$('#rec_tab').imagefit();});
+
             $("img.rollover").hover(
                     function() { this.src = this.src.replace("_tag", "_tag_mouse");
                     },
@@ -22,9 +26,24 @@
                     });
         });
         $(document).ready(function() {
+            var temp = 0;
+            $('.sidr-toggle').click( function() {
+                if (temp == 0) {
+
+                    $(this).css('margin-left', '-621px');
+                    temp = 1;
+                }
+
+                else {
+                    $(this).css('margin-left', '0px');
+                    temp = 0;
+                }
+
+            });
             $('#simple-menu').sidr({
                 side: 'right'
             });
+
         });
 
         $(document).ready(function() {
@@ -158,11 +177,11 @@
 <div class="container">
     <br/>
     <div class="row">
-        <div class="col-md-11">
-            <img src="../img/recommend/rec_tab.png">
+        <div id ="rec_tab" class="col-md-11">
+            <img src="../img/recommend/rec_tab.png" width="1177px">
         </div>
         <div class="col-md-1" style="right:-21%;">
-            <a id="simple-menu" href="#sidr"><img src="../img/recommend/rec_tag.png" class="rollover"></a>
+            <a id="simple-menu" href="#sidr"><span class="sidr-toggle"><img src="../img/recommend/rec_tag.png" class="rollover"></span></a>
         </div>
 
     </div>
@@ -203,19 +222,19 @@
     <ul class="sidr1">
         <li>
             <div class="row">
-                <div class="col-sm-2" style="margin-top:65%; left:3%;">
+                <div class="col-sm-2" style="margin-top:70%; left:3%;">
                     <a href="#" id="left_btn"><img src="../img/recommend/rec_left.png" ></a>
                 </div>
-                <div class="col-sm-8" style="margin-top:32%; left:-1%;">
+                <div class="col-sm-8" style="margin-top:35%; left:-1%;">
                     <img src="../img/recommend/rec_clothes_1.png" id="clothes_img">
                 </div>
-                    <div class="col-sm-2" style="margin-top:65%; right:10%;">
+                    <div class="col-sm-2" style="margin-top:70%; right:10%;">
                         <a href="#" id="right_btn"><img src="../img/recommend/rec_right.png"></a>
                 </div>
             </div>
         </li>
         <li>
-            <div class="row" style="margin-top:15%; margin-left:-8%;">
+            <div class="row" style="margin-top:20%; margin-left:-8%;">
                 <img src="../img/recommend/rec_table_1.png" id="clothes_table">
             </div>
         </li>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- 부트스트랩 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="../css/custom_slider.css" rel="stylesheet">
+
+    <link href="../bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../bootstrap/bootstrap.js" rel="javascript">
+    <script type="text/javascript" src="../bootstrap/bootstrap.min.js"></script>
+    <link href="../css/index.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+
+    <link rel="stylesheet" href="../js/sidr/stylesheets/jquery.sidr.light.css">
+    <script type="text/javascript" src="../js/sidr/jquery.sidr.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            var temp = 0;
+            $('.sidr-toggle').click( function() {
+                if (temp == 0) {
+
+                    $(this).css('margin-left', '200px');
+                    temp = 1;
+                }
+
+                else {
+                    $(this).css('margin-left', '0px');
+                    temp = 0;
+                }
+
+            });
+            $('#simple-menu').sidr();
+
+
+        });
+
+        //        $(window).load(function() {$('.clothes_img').imagefit();});
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("img.rollover").hover(
+                    function() { this.src = this.src.replace("_off", "_on");
+                    },
+                    function() { this.src = this.src.replace("_on", "_off");
+                    });
+        });
+
+
+    </script>
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../main.html">
+                <ul class="nav navbar-nav">
+                    <li class="menu-item"><img alt="NAVER" src="../assets/naverlogo.png"> </li>
+                    <li class="menu-item" style="padding-left:8px"><img alt="FROM" src="../assets/fromlogo.png"></li>
+
+                </ul>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img alt="huiyomi" src="../assets/huiyomi.png"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="../recommend/rec_main.html"><img alt="CART" src="../assets/cart.png"></a></li>
+                <li class="menu-item"><a href="../promotion/promotion_1.html"><img alt="QNA" src="../assets/qna.png"></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<a id="simple-menu" href="#sidr"><span class="sidr-toggle">☰</span></a>
+
+<div id="sidr">
+    <ul class="sidr1">
+        <li class="sidr2"><a href="../main.html">FROM 홈</a></li>
+        <hr>
+        <li class="sidr2"><a href="#">나의 옷장</a></li>
+        <ul class="sidr3">
+            <li class="sidr4"><a href="../closet/top.html">상의</a></li>
+            <li class="sidr4"><a href="../closet/bottom.html">하의</a></li>
+            <li class="sidr4"><a href="../closet/onepiece.html">원피스</a></li>
+            <li class="sidr4"><a href="../closet/outer.html">외투</a></li>
+        </ul>
+        <hr>
+
+        <li class="sidr2"><a href="../myfit/myfit_top.html">마이핏</a></li>
+        <li class="sidr2"><a href="../profile/top.html">프로필</a></li>
+        <li class="sidr2"><a href="#">테마설정</a></li>
+    </ul>
+    <ul style="position: absolute; bottom:0%;">
+        <li>
+            <img src="../img/main/main_copyright.png" width="200px" height="auto">
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <!--<ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+
+        </ol>-->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="row" >
+                    <img src="../img/promotion/pro_scroll_1.png" class="pro_scroll">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1" style="left:-20%; margin-top:25%;">
+                    </div>
+                    <div class="col-md-5" style="left:-10%; margin-top:5%;">
+                        <img src="../img/promotion/pro_p1_image_1.png">
+                    </div>
+                    <div class="col-md-5" style="margin-top:13%;">
+                        <img src="../img/promotion/pro_p1_image_2.png"><br/><br/>
+                        <div style="margin-left:-8%;">
+                            <a href="../index.html"><img src="../img/promotion/pro_p1_start.png"></a> &nbsp;
+                            <a href="#"><img src="../img/promotion/pro_p1_movie.png"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-1" style="right:-20%; margin-top:25%;">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:14%;">
+                        <img src="../img/promotion/pro_text_1.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row">
+                    <img src="../img/promotion/pro_scroll_2.png" class="pro_scroll">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1" style="left:-20%; margin-top:25%;">
+                    </div>
+                    <div class="col-md-5" style="left:-5%; margin-top:5%;" class="slider">
+                        <img src="../img/promotion/pro_p2_image_1.png">
+                    </div>
+                    <div class="col-md-5" style="left:-4%; margin-top:26%;" class="slider">
+                        <img src="../img/promotion/pro_icon_click_1.png">
+                        <img src="../img/promotion/pro_icon_2.png">
+                        <img src="../img/promotion/pro_icon_3.png">
+                        <img src="../img/promotion/pro_icon_4.png">
+
+                    </div>
+                    <div class="col-md-1" style="right:-20%; margin-top:25%;">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:10%;">
+                        <img src="../img/promotion/pro_text_2.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row">
+                <img src="../img/promotion/pro_scroll_2.png" class="pro_scroll" >
+            </div>
+
+                <div class="row">
+                    <div class="col-md-1" style="left:-20%; margin-top:25%;">
+                    </div>
+                    <div class="col-md-5" style="left:-5%; margin-top:5%;" class="slider">
+                        <img src="../img/promotion/pro_p2_image_2.png">
+                    </div>
+                    <div class="col-md-5" style="left:-4%; margin-top:26%;" class="slider">
+                        <img src="../img/promotion/pro_icon_1.png">
+                        <img src="../img/promotion/pro_icon_click_2.png">
+                        <img src="../img/promotion/pro_icon_3.png">
+                        <img src="../img/promotion/pro_icon_4.png">
+
+                    </div>
+                    <div class="col-md-1" style="right:-20%; margin-top:25%;">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:10%;">
+                        <img src="../img/promotion/pro_text_2.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row" >
+                    <img src="../img/promotion/pro_scroll_2.png" class="pro_scroll">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1" style="left:-20%; margin-top:25%;">
+                    </div>
+                    <div class="col-md-5" style="left:-5%; margin-top:5%;" class="slider">
+                        <img src="../img/promotion/pro_p2_image_3.png">
+                    </div>
+                    <div class="col-md-5" style="left:-4%; margin-top:26%;" class="slider">
+                        <img src="../img/promotion/pro_icon_1.png">
+                        <img src="../img/promotion/pro_icon_2.png">
+                        <img src="../img/promotion/pro_icon_click_3.png">
+                        <img src="../img/promotion/pro_icon_4.png">
+
+                    </div>
+                    <div class="col-md-1" style="right:-20%; margin-top:25%;">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:10%;">
+                        <img src="../img/promotion/pro_text_2.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row">
+                    <img src="../img/promotion/pro_scroll_2.png" class="pro_scroll">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1" style="left:-20%; margin-top:25%;">
+                    </div>
+                    <div class="col-md-5" style="left:-5%; margin-top:5%;" class="slider">
+                        <img src="../img/promotion/pro_p2_image_4.png">
+                    </div>
+                    <div class="col-md-5" style="left:-4%; margin-top:26%;" class="slider">
+                        <img src="../img/promotion/pro_icon_1.png">
+                        <img src="../img/promotion/pro_icon_2.png">
+                        <img src="../img/promotion/pro_icon_3.png">
+                        <img src="../img/promotion/pro_icon_click_4.png">
+
+                    </div>
+                    <div class="col-md-1" style="right:-20%; margin-top:25%;">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:10%;">
+                        <img src="../img/promotion/pro_text_2.png">
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <div class="row">
+                    <img src="../img/promotion/pro_scroll_3.png" class="pro_scroll">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1" style="left:-15%; margin-top:25%;">
+                    </div>
+                    <div class="col-md-5" style="left:-8%; margin-top:5%;" class="slider">
+                        <img src="../img/promotion/pro_p3_image_1.png">
+                    </div>
+                    <div class="col-md-5" style="left:8%; margin-top:31%;" class="slider">
+                    </div>
+
+                    <div class="col-md-1" style="right:-20%; margin-top:25%;">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:14%;">
+                        <img src="../img/promotion/pro_text_3-1.png">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="item">
+                <div class="row">
+                    <img src="../img/promotion/pro_scroll_3.png" class="pro_scroll">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1" style="left:-20%; margin-top:25%;">
+                    </div>
+                    <div class="col-md-5" style="left:-5%; margin-top:0%;" class="slider">
+                        <img src="../img/promotion/pro_p3_image_2.png">
+                    </div>
+                    <div class="col-md-5" style="left:8%; margin-top:31%;" class="slider">
+                    </div>
+
+                    <div class="col-md-1" style="right:-20%; margin-top:25%;">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:14%;">
+                        <img src="../img/promotion/pro_text_3-2.png">
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <div class="row" >
+                    <img src="../img/promotion/pro_scroll_4.png" class="pro_scroll">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1" style="left:8%; margin-top:31%;" class="slider">
+                    </div>
+                    <div class="col-md-5" style="left:-5%; margin-top:10%;" class="slider">
+                        <a href="../main.html"><img src="../img/promotion/pro_p4_image.png"></a>
+                    </div>
+                    <div class="col-md-5" style="left:8%; margin-top:31%;" class="slider">
+                    </div>
+                    <div class="col-md-1" style="left:8%; margin-top:31%;" class="slider">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:14%;">
+                        <img src="../img/promotion/pro_text_4.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <img src="../img/promotion/pro_left.png">
+
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <img src="../img/promotion/pro_right.png">
+
+        </a>
+    </div>
+</div>
+<!--
+
+<div class="container">
+    <br/>
+    <div class="row" style="text-align:right; margin-right:-15%;">
+        <img src="../img/promotion/pro_scroll_1.png">
+    </div>
+
+    <div class="row">
+        <div class="col-md-1" style="left:-20%; margin-top:25%;">
+            <img src="../img/promotion/pro_left.png">
+        </div>
+        <div class="col-md-5" style="left:-20%; margin-top:5%;">
+            <img src="../img/promotion/pro_p1_image_1.png">
+        </div>
+        <div class="col-md-5" style="margin-top:13%;">
+            <img src="../img/promotion/pro_p1_image_2.png"><br/><br/>
+            <div style="margin-left:-8%;">
+                <a href="../index.html"><img src="../img/promotion/pro_p1_start.png"></a> &nbsp;
+                <a href="#"><img src="../img/promotion/pro_p1_movie.png"></a>
+            </div>
+        </div>
+        <div class="col-md-1" style="right:-20%; margin-top:25%;">
+            <a href="./promotion_2.html"><img src="../img/promotion/pro_right.png"></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="margin-top:10%;">
+            <img src="../img/promotion/pro_text_1.png">
+        </div>
+    </div>
+
+
+</div>-->
+
+</body>
+</html>

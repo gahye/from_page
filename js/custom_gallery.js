@@ -22,6 +22,7 @@ var totalSlides = 0;                  // Total number of slides in the gallery (
 var flipTimeouts = new Array;         // For storing the timeout IDs so we can clear them
 
 
+
 // Display the loading message after a short delay
 $( function() {
 
@@ -232,8 +233,27 @@ function displayGallery() {
     var pop_src = "../img/closet/top/top_pop_";
     var idx = (currentSlide*1 + 3);
     if (idx <= totalSlides && idx >= 1){
+        if (idx == 4){
+            $('.star-rating').css('visibility', 'visible');
+            $('.star-rating img').attr('src', "../img/closet/top/star_empty.png");
+            $('.star-rating img').attr('display', "inline-block");
+            $('.star-rating img').css('padding-right', '21px');
+
+            $('.fit-rating').css('visibility', 'visible');
+            $('.fit-rating img').attr('src', "../img/closet/top/fit_empty.png");
+            $('.fit-rating img').attr('display', "inline-block");
+            $('.fit-rating img').css('padding-right', '33px');
+
+
+        }
+        else {
+            $('.star-rating').css('visibility', 'hidden');
+            $('.fit-rating').css('visibility', 'hidden');
+
+        }
         var new_src = pop_src.concat(idx.toString(), '.png');
         $('img.pop').attr('src', new_src);
+
     }
 
     // Update the slider value and caption
@@ -243,8 +263,8 @@ function displayGallery() {
 
 
 
-}
 
+}
 
 // Move one slide to the left by sliding the gallery left-to-right
 

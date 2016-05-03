@@ -16,9 +16,82 @@
     <script type="text/javascript" src="../js/jquery.jswipe-0.1.2.js"></script>
     <script type="text/javascript" src="../js/custom_gallery.js"></script>
 
+    <link rel="stylesheet" href="../js/sidr/stylesheets/jquery.sidr.light.css">
+    <script type="text/javascript" src="../js/sidr/jquery.sidr.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            var temp = 0;
+            $('.sidr-toggle').click( function() {
+                if (temp == 0) {
+
+                    $(this).css('margin-left', '200px');
+                    temp = 1;
+                }
+
+                else {
+                    $(this).css('margin-left', '0px');
+                    temp = 0;
+                }
+
+            });
+            $('#simple-menu').sidr();
+
+
+        });
+    </script>
 
     <script type="text/javascript">
         //        $(window).load(function() {$('.clothes_img').imagefit();});
+
+        $(document).ready( function() {
+            $('.star-rating img').hover(
+                    function(){
+                        var on = $(this).attr('value') * 1;
+                        var idx = 1;
+
+                        var back = "../img/closet/top/star_empty.png";
+                        var starred = "../img/closet/top/star_full.png";
+
+                        while (idx <= on) {
+                            $(".star-rating img[value =" + idx + "]").attr('src', starred);
+                            idx ++;
+                        }
+
+                        while (idx <=5 ) {
+                            $(".star-rating img[value =" + idx + "]").attr('src', back);
+                            idx ++;
+                        }
+
+                    });
+            $('.fit-rating img').hover(
+                    function(){
+                        var on = $(this).attr('value') * 1;
+                        var idx = 1;
+
+                        var back = "../img/closet/top/fit_empty.png";
+                        var fitted = "../img/closet/top/fit_full.png";
+
+                        while (idx <= on) {
+                            $(".fit-rating img[value =" + idx + "]").attr('src', fitted);
+                            idx ++;
+                        }
+
+                        while (idx <=5 ) {
+                            $(".fit-rating img[value =" + idx + "]").attr('src', back);
+                            idx ++;
+                        }
+
+                    });
+
+/*            $(".txt_box").click(
+                    function() {
+                        $("txt_div").append("<textarea rows='4' cols='40'>At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. ")
+
+
+                    });*/
+        });
     </script>
 </head>
 <body>
@@ -51,12 +124,39 @@
 
 
                 </li>
-                <li class="menu-item"><a href="./recommend/rec_main.html"><img alt="CART" src="../assets/cart.png"></a></li></a></li>
-                <li class="menu-item"><a href="#"><img alt="QNA" src="../assets/qna.png"></a></li></a></li>
+                <li class="menu-item"><a href="../recommend/rec_main.html"><img alt="CART" src="../assets/cart.png"></a></li></a></li>
+                <li class="menu-item"><a href="../promotion/promotion_1.html"><img alt="QNA" src="../assets/qna.png"></a></li></a></li>
             </ul>
         </div>
     </div>
 </nav>
+
+
+<a id="simple-menu" href="#sidr"><span class="sidr-toggle">☰</span></a>
+
+<div id="sidr">
+    <ul class="sidr1">
+        <li class="sidr2"><a href="../main.html">FROM 홈</a></li>
+        <hr>
+        <li class="sidr2"><a href="#">나의 옷장</a></li>
+        <ul class="sidr3">
+            <li class="sidr4"><a href="../closet/top.html">상의</a></li>
+            <li class="sidr4"><a href="../closet/bottom.html">하의</a></li>
+            <li class="sidr4"><a href="../closet/onepiece.html">원피스</a></li>
+            <li class="sidr4"><a href="../closet/outer.html">외투</a></li>
+        </ul>
+        <hr>
+
+        <li class="sidr2"><a href="../myfit/myfit_top.html">마이핏</a></li>
+        <li class="sidr2"><a href="../profile/top.html">프로필</a></li>
+        <li class="sidr2"><a href="#">테마설정</a></li>
+    </ul>
+    <ul style="position: absolute; bottom:0%;">
+        <li>
+            <img src="../img/main/main_copyright.png" width="200px" height="auto">
+        </li>
+    </ul>
+</div>
 
 <div class="container">
 
@@ -64,7 +164,7 @@
         <div class="col-md-7">
 
             <div style="position:relative; left:-25%; margin-top:-2%; z-index:-2000;">
-                <img src="../img/closet/top/top_back.png ">
+                <img src="../img/closet/top/top_back.png">
             </div>
             <div style="position:relative; left: 72%; margin-top:-115%; z-index:1">
             <!--<div style="position:absolute; top:40px; left:100px; z-index:1">-->
@@ -91,14 +191,38 @@
 
         </div>
         <div class="col-md-5">
-            <div style="position:relative; left:64%; margin-top:28%;">
-                <img src="../img/closet/top/top_pop_1.png" class="pop" style="overflow:visible;">
+            <div class="txt_div" style="position:relative; left:64%; margin-top:28%; z-index:-1;">
+                <img src="../img/closet/top/top_pop_4.png" class="pop" style="overflow:visible;" usemap="#txt_map">
+               <!-- <map name="txt_map">
+                    <area shape="rect" class="txt_box" coords="240, 380, 420, 620" href="#">
+                </map> -->
             </div>
+
+            <div style="position:relative; margin-top:-114.8%;left:78.5%;">
+                <span class="star-rating" style="visibility:hidden; z-index:1;">
+                    <img class="radio_star" name="rating" value="1">
+                    <img class="radio_star" name="rating" value="2">
+                    <img class="radio_star" name="rating" value="3">
+                    <img class="radio_star" name="rating" value="4">
+                    <img class="radio_star" name="rating" value="5">
+                </span>
+            </div>
+
+            <div style="position:relative; margin-top:5.5%;left:79.5%;">
+                <span class="fit-rating" style="visibility:hidden; z-index:1;">
+                    <img class="radio_fit" name="rating" value="1">
+                    <img class="radio_fit" name="rating" value="2">
+                    <img class="radio_fit" name="rating" value="3">
+                    <img class="radio_fit" name="rating" value="4">
+                    <img class="radio_fit" name="rating" value="5">
+                </span>
+            </div>
+
 
         </div>
    </div>
     <div class="row">
-        <div class="col-md-6" style="left:6%; margin-top:-13%;">
+        <div class="col-md-6" style="position:absolute; left:260px; top:800px; ">
 
             <input type="range" name="slider" id="slider" />
             <div id="caption"></div>

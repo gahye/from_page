@@ -15,8 +15,30 @@
     <script type="text/javascript" src="../js/jquery.imagefit.js"></script>
     <script type="text/javascript" src="../js/jquery.jswipe-0.1.2.js"></script>
 
+    <link rel="stylesheet" href="../js/sidr/stylesheets/jquery.sidr.light.css">
+    <script type="text/javascript" src="../js/sidr/jquery.sidr.min.js"></script>
 
     <script type="text/javascript">
+
+        $(document).ready(function() {
+            var temp = 0;
+            $('.sidr-toggle').click( function() {
+                if (temp == 0) {
+
+                    $(this).css('margin-left', '200px');
+                    temp = 1;
+                }
+
+                else {
+                    $(this).css('margin-left', '0px');
+                    temp = 0;
+                }
+
+            });
+            $('#simple-menu').sidr();
+
+
+        });
         //        $(window).load(function() {$('.clothes_img').imagefit();});
     </script>
 </head>
@@ -50,12 +72,38 @@
 
 
                 </li>
-                <li class="menu-item"><a href="./recommend/rec_main.html"><img alt="CART" src="../assets/cart.png"></a></li></a></li>
-                <li class="menu-item"><a href="#"><img alt="QNA" src="../assets/qna.png"></a></li></a></li>
+                <li class="menu-item"><a href="../recommend/rec_main.html"><img alt="CART" src="../assets/cart.png"></a></li></a></li>
+                <li class="menu-item"><a href="../promotion/promotion_1.html"><img alt="QNA" src="../assets/qna.png"></a></li></a></li>
             </ul>
         </div>
     </div>
 </nav>
+
+<a id="simple-menu" href="#sidr"><span class="sidr-toggle">☰</span></a>
+
+<div id="sidr">
+    <ul class="sidr1">
+        <li class="sidr2"><a href="../main.html">FROM 홈</a></li>
+        <hr>
+        <li class="sidr2"><a href="#">나의 옷장</a></li>
+        <ul class="sidr3">
+            <li class="sidr4"><a href="../closet/top.html">상의</a></li>
+            <li class="sidr4"><a href="../closet/bottom.html">하의</a></li>
+            <li class="sidr4"><a href="../closet/onepiece.html">원피스</a></li>
+            <li class="sidr4"><a href="../closet/outer.html">외투</a></li>
+        </ul>
+        <hr>
+
+        <li class="sidr2"><a href="../myfit/myfit_top.html">마이핏</a></li>
+        <li class="sidr2"><a href="../profile/top.html">프로필</a></li>
+        <li class="sidr2"><a href="#">테마설정</a></li>
+    </ul>
+    <ul style="position: absolute; bottom:0%;">
+        <li>
+            <img src="../img/main/main_copyright.png" width="200px" height="auto">
+        </li>
+    </ul>
+</div>
 
 <div class="container">
 

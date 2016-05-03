@@ -72,17 +72,13 @@
 */
 
 #slider {
-    position: absolute;
-    bottom: 0px;
-    left: 34%;
-    right: 5%;
     -webkit-appearance: none !important;
     border-radius: 10px;
     border: 1px solid white;
     background: #999;
     opacity: .5;
     display: none;
-    width:55%;
+    width:40%;
     z-index:1;
 }
 
@@ -156,4 +152,7 @@
 */
 
 
+.star-rating img {
+    display: inline;
 
+}
